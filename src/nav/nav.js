@@ -9,7 +9,7 @@ export default function Nav() {
     `
 
     const Nav = styled.nav`
-        background-color: red;
+    
     `
 
     const Li = styled.li`

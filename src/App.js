@@ -1,13 +1,13 @@
 import React from 'react';
 import './index.css'
 
-import Nav from './nav'
+import Header from './header'
 
 export default function App() {
   
 	return (
 		<div>
-			<Nav/>
+			<Header/>
 		</div>
 	);
 }
