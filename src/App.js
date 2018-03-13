@@ -10,7 +10,6 @@ export default function App() {
 	return (
 		<div>
 			<Header/>
-			<TechStack />
 			<Projects/>
 		</div>
 	);
