@@ -57,6 +57,8 @@ export default function Banner() {
 
         icon {
             display: block;
+            transform: translateY(0rem);
+            transition: all .3s;
         }
 
 

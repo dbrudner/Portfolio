@@ -7,7 +7,7 @@ import Banner from './banner'
 export default function Header() {
 
     const Div = styled.div`
-        height: 66vh;
+        height: 90vh;
         background-color: #2098D1;
     `
 
