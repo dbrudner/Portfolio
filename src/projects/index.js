@@ -13,8 +13,6 @@ export default function Projects() {
     const Projects = styled.div`
         margin: 3rem;
         margin-bottom: 50rem;
-        display: grid;
-        grid-template-columns: auto auto;
 
         div {
             width: 100%;
@@ -25,18 +23,10 @@ export default function Projects() {
 
     return (
         <Projects>
-            <div>            
-                <Card odd img={hearthsearch} />
-            </div>    
-            <div>
-                <Card img={csgo} />
-            </div>
-            <div>
-                <Card odd img={wallpapers} />
-            </div>
-            <div>
-                <Card img={crypto} />
-            </div>     
+            <Card odd img={hearthsearch} />
+            <Card img={csgo} />
+            <Card bottom odd img={wallpapers} />
+            <Card bottom img={crypto} />
         </Projects>
     )
 }
