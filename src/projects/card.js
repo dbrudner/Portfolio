@@ -20,7 +20,7 @@ export default class Card extends Component {
 
     hideTech = () => {
         console.log('hide')
-        
+
         this.setState({showTech: false})
     }
 
@@ -28,20 +28,17 @@ export default class Card extends Component {
         const Card = styled.div`
             position: relative;
             display: block;
-            margin-left: 33.3%;
-            margin-top: 3rem;
 
             img {
                 position: relative;
-                width: 33.3%;
                 cursor: pointer;
                 z-index: 1;
-                opacity: .2;
-                transition: all .3s;                
-
+                opacity: .3;
+                transition: all .3s;
+                width: 100%;
                 &:hover {
-                    
-                    position: relative;                
+
+                    position: relative;
                     display: block;
                     opacity: 0;
                     transition: all .3s;
@@ -52,7 +49,7 @@ export default class Card extends Component {
                 cursor: pointer;
                 content: " ";
                 height: 100%;
-                width: 33.3%;
+                width: 100%;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -64,7 +61,6 @@ export default class Card extends Component {
             position: absolute;
             top: 0;
             left: 0;
-            width: 33% !important;
         `
 
         return (
@@ -77,5 +73,5 @@ export default class Card extends Component {
         )
     }
 
-    
+
 }
