@@ -4,13 +4,15 @@ import styled from 'styled-components'
 export default function SubHeader(props) {
 
     const SubHeader = styled.div`
-    
+
         h2 {
             text-align: center;
             text-transform: uppercase;
             font-size: 3.6rem;
             letter-spacing: 2rem;
             color: #2098D1;
+            margin-left: -2rem;
+            
         }
     `
 
@@ -21,7 +23,7 @@ export default function SubHeader(props) {
     return (
         <SubHeader>
             <h2>{props.text}</h2>
-            <HR/>
+            {props.noHr ? null : <HR/>}
         </SubHeader>
     )
 }

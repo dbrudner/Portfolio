@@ -34,6 +34,7 @@ export default class ImageCluster extends Component {
             height: 60rem;
             position: relative;
             margin-top: 10rem;
+            width: 500rem;
 
             @media only screen and (min-width: 1600px) {
                 

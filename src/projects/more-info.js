@@ -85,7 +85,9 @@ export default function MoreInfo(props) {
 
     `
 
-    const Links = styled.ul`
+    const Hr = styled.hr`
+        width: 50%;
+        border-color: #3f3f3f; 
     `
     
 
@@ -97,7 +99,6 @@ export default function MoreInfo(props) {
             <Tech>
                 {renderList(props.info.tech)}
             </Tech>
-            <hr/>
             <Features>
                 {renderList(props.info.features)}
             </Features>
