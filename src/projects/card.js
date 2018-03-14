@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 
-import Tech from './tech'
+import MoreInfo from './more-info'
+import LinkButton from './link-button'
 
 export default class Card extends Component {
 
@@ -9,29 +10,34 @@ export default class Card extends Component {
         super(props)
 
         this.state = {
-            showTech: false
+            showMoreInfo: true,
+            showLinks: false
         }
     }
 
-    showTech = () => {
-        console.log('show')
-        this.setState({showTech: true})
+    showLinks = () => {
+        this.setState({showLinks: true})
     }
 
-    hideTech = () => {
+    showMoreInfo = () => {
+        console.log('show')
+        // this.setState({showMoreInfo: true})
+    }
+
+    hideMoreInfo = () => {
         console.log('hide')
 
-        this.setState({showTech: false})
+        // this.setState({showMoreInfo: false})
     }
 
     render() {
         const Card = styled.div`
             position: relative;
             display: block;
+            cursor: pointer;
 
             img {
                 position: relative;
-                cursor: pointer;
                 z-index: 1;
                 opacity: .3;
                 transition: all .3s;
@@ -42,11 +48,11 @@ export default class Card extends Component {
                     display: block;
                     opacity: 0;
                     transition: all .3s;
+                    
                 }
             }
 
             :before {
-                cursor: pointer;
                 content: " ";
                 height: 100%;
                 width: 100%;
@@ -57,18 +63,29 @@ export default class Card extends Component {
                 background: rgba(0, 0, 0, 1);
             }
         `
-        const TechContainer = styled.div`
+        const MoreInfoContainer = styled.div`
             position: absolute;
+            width: 100%;
             top: 0;
             left: 0;
         `
 
+        const Links = styled.div`
+            position: absolute;
+            top: 90%;
+            z-index: 1000;
+        `
+
         return (
-            <Card odd={this.props.odd}>
-                <img src={this.props.img} onMouseLeave={() => {this.hideTech()}} onMouseEnter={() => {this.showTech()}} />
-                <TechContainer>
-                    {this.state.showTech ? <Tech /> : null}
-                </TechContainer>
+            <Card onClick={this.showLinks} odd={this.props.odd}>
+                <img src={this.props.img} onMouseEnter={() => {this.showMoreInfo()}} />
+                <MoreInfoContainer onMouseLeave={() => {this.hideMoreInfo()}} >
+                    {this.state.showMoreInfo ? <MoreInfo info={this.props.info}/> : null}
+                </MoreInfoContainer>
+                
+                <Links>
+                    {this.state.showLinks ? <LinkButton/> : null}
+                </Links>
             </Card>
         )
     }
