@@ -27,6 +27,9 @@ export default class ImageCluster extends Component {
     }
 
     render() {
+
+        const topMargin = {marginTop: '18rem'}
+
         const ImageCluster = styled.div`
             height: 60rem;
             position: relative;
@@ -35,7 +38,7 @@ export default class ImageCluster extends Component {
 
             img {
                 width: 30rem;
-                border-radius: 20px;
+                border-radius: 2px;
                 box-shadow: 0 1.5rem 4rem rgb(11.2%, 11.2%, 11.2%);
                 z-index: 1;
                 transition: all .2s;
@@ -64,11 +67,15 @@ export default class ImageCluster extends Component {
                 }
             }`
 
+        console.log(this.props.secondRow)
+
         return (
             <ImageCluster>
-                <img src={zbar} onMouseLeave={() => this.removeCaption()} onMouseEnter={() => this.showCaption('cat')}/>
-                <img src={me} />
-                <img src={okinawa} />
+                <div style={this.props.secondRow ? topMargin : null}>
+                    <img src={this.props.img1} onMouseLeave={() => this.removeCaption()} onMouseEnter={() => this.showCaption('cat')}/>
+                    <img src={this.props.img2} />
+                    <img src={this.props.img3} />
+                </div>
             </ImageCluster>
         )
     }
