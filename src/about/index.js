@@ -19,7 +19,7 @@ export default function About() {
     console.log(text)
 
     const About = styled.div`
-        margin-bottom: 100rem;
+        margin-bottom: 20rem;
         margin-left: 20%;
         margin-right: 20%;
 

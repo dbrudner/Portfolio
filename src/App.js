@@ -5,6 +5,7 @@ import Header from './header'
 import TechStack from './tech-stack'
 import Projects from './projects'
 import About from './about'
+import Contact from './contact'
 
 export default function App() {
 
@@ -13,6 +14,7 @@ export default function App() {
 			<Header/>
 			<Projects/>
 			<About/>
+			<Contact/>
 		</div>
 	);
 }
