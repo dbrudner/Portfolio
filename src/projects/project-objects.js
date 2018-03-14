@@ -11,7 +11,7 @@ const projects = {
         name: 'Pro CS:GO Schedule',
         tech: ['Express', 'React', 'Node'],
         features: ['Mobile Responsive', 'Custom CSS'],
-        link: 'https://hearth-search.herokuapp.com/',
+        link: 'https://aqueous-wave-59184.herokuapp.com/',
         github: 'https://github.com/dbrudner/CSGO-FrontPage'        
     },
 

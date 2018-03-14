@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
+import { Transition } from 'react-transition-group'
 
 import MoreInfo from './more-info'
 import LinkButton from './link-button'
@@ -10,25 +11,22 @@ export default class Card extends Component {
         super(props)
 
         this.state = {
-            showMoreInfo: true,
+            showMoreInfo: false,
             showLinks: false
         }
     }
 
     showLinks = () => {
-        this.setState({showLinks: true})
-    }
+        this.setState({showLinks: true}
+    )}
 
     showMoreInfo = () => {
-        console.log('show')
-        // this.setState({showMoreInfo: true})
-    }
+        this.setState({showMoreInfo: true}
+    )}
 
     hideMoreInfo = () => {
-        console.log('hide')
-
-        // this.setState({showMoreInfo: false})
-    }
+        this.setState({showMoreInfo: false}
+    )}
 
     render() {
         const Card = styled.div`
@@ -39,14 +37,14 @@ export default class Card extends Component {
             img {
                 position: relative;
                 z-index: 1;
-                opacity: .3;
+                opacity: .01;
                 transition: all .3s;
                 width: 100%;
                 &:hover {
 
                     position: relative;
                     display: block;
-                    opacity: 0;
+                    opacity: 0.3;
                     transition: all .3s;
                     
                 }
@@ -77,16 +75,15 @@ export default class Card extends Component {
         `
 
         return (
-            <Card onClick={this.showLinks} odd={this.props.odd}>
-                <img src={this.props.img} onMouseEnter={() => {this.showMoreInfo()}} />
-                <MoreInfoContainer onMouseLeave={() => {this.hideMoreInfo()}} >
-                    {this.state.showMoreInfo ? <MoreInfo info={this.props.info}/> : null}
-                </MoreInfoContainer>
-                
-                <Links>
-                    {this.state.showLinks ? <LinkButton/> : null}
-                </Links>
-            </Card>
+            <a href={this.props.info.link} target='_blank'>
+                <Card odd={this.props.odd}>
+                    <img src={this.props.img} />
+                    
+                    <MoreInfoContainer>
+                        <MoreInfo info={this.props.info}/ >
+                    </MoreInfoContainer>
+                </Card>
+            </a>
         )
     }
 
