@@ -86,6 +86,4 @@ export default class Card extends Component {
             </a>
         )
     }
-
-
 }

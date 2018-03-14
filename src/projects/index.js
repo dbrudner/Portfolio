@@ -13,7 +13,7 @@ import projects from './project-objects'
 export default function Projects() {
 
     const Projects = styled.div`
-        margin-bottom: 50rem;
+        margin-bottom: 20rem;
     `
 
     return (

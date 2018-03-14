@@ -16,7 +16,7 @@ export default function MoreInfo(props) {
 
     const fadeIn = keyframes`
         from {
-            transform: scale(.25);
+            transform: scale(.85);
             opacity: 0;
         }
 
@@ -61,7 +61,9 @@ export default function MoreInfo(props) {
 
     const Features = styled.ul`
         color: rgb(144,144,144);
-        opacity: .5;        
+        opacity: .5;     
+        font-size: 1.6rem;
+        
     `
 
     const Tech = styled.ul`
@@ -95,6 +97,7 @@ export default function MoreInfo(props) {
             <Tech>
                 {renderList(props.info.tech)}
             </Tech>
+            <hr/>
             <Features>
                 {renderList(props.info.features)}
             </Features>

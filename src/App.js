@@ -4,6 +4,7 @@ import './index.css'
 import Header from './header'
 import TechStack from './tech-stack'
 import Projects from './projects'
+import About from './about'
 
 export default function App() {
 
@@ -11,6 +12,7 @@ export default function App() {
 		<div>
 			<Header/>
 			<Projects/>
+			<About/>
 		</div>
 	);
 }
