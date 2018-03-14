@@ -6,8 +6,6 @@ export default function(props) {
     console.log(props)
 
     const About = styled.div`
-        margin-left: 10%;
-        margin-right: 10%;
         font-family: lato;
 
     `

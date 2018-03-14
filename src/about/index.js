@@ -4,7 +4,7 @@ import {Grid, Row, Col} from 'react-bootstrap'
 
 import ImageCluster from './image-cluster'
 import AboutText from './about-text'
-import AboutHeader from './about-header'
+import SubHeader from '../general-components/sub-header'
 
 import me from '../images/me.jpg'
 import zbar from '../images/cat1.png'
@@ -22,6 +22,12 @@ export default function About() {
         margin-bottom: 100rem;
         margin-left: 20%;
         margin-right: 20%;
+
+        @media only screen and (max-width: 2200px) {
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+}
     `
 
     const AboutTextCntr = styled.div`
@@ -30,7 +36,7 @@ export default function About() {
 
     return (
         <About>
-            <AboutHeader/>
+            <SubHeader text='About'/>
             <Grid>
                 <Row>
                     <Col md={12} lg={6}>

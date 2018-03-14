@@ -33,12 +33,16 @@ export default class ImageCluster extends Component {
         const ImageCluster = styled.div`
             height: 60rem;
             position: relative;
-            margin-left: 20%;
             margin-top: 10rem;
+
+            @media only screen and (min-width: 1600px) {
+                margin-left: 10%;
+                margin-right: 10%;
+            }
 
             img {
                 width: 30rem;
-                border-radius: 2px;
+                border-radius: 20px;
                 box-shadow: 0 1.5rem 4rem rgb(11.2%, 11.2%, 11.2%);
                 z-index: 1;
                 transition: all .2s;

@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function AboutHeader() {
+export default function SubHeader(props) {
 
-    const AboutHeader = styled.div`
+    const SubHeader = styled.div`
     
         h2 {
             text-align: center;
@@ -19,9 +19,9 @@ export default function AboutHeader() {
     `
 
     return (
-        <AboutHeader>
-            <h2>About</h2>
+        <SubHeader>
+            <h2>{props.text}</h2>
             <HR/>
-        </AboutHeader>
+        </SubHeader>
     )
 }
