@@ -28,8 +28,10 @@ export default class ImageCluster extends Component {
 
     render() {
         const ImageCluster = styled.div`
+            height: 60rem;
             position: relative;
             margin-left: 20%;
+            margin-top: 10rem;
 
             img {
                 width: 30rem;

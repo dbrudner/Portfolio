@@ -16,10 +16,14 @@ export default function About() {
         <About>
             <Grid>
                 <Row>
-                    <Col lg={6}>
-                        <ImageCluster/>
+                    <Col md={12} lg={6}>
+                        <div>
+                            <ImageCluster/>
+                        </div>
                     </Col>
-                    <Col lg={6}>
+                    <div>
+                    </div>
+                    <Col md={12} lg={6}>
                         <AboutText />
                     </Col>
                 </Row>

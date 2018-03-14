@@ -24,7 +24,7 @@ const projects = {
     },
 
     bitcoin: {
-        name: 'Cryptocurrency Values',
+        name: 'Crypto Values',
         tech: ['React'],
         features: ['API requests', 'Mobile Responsive', 'Bootstrap'],
         link: 'https://cryptocurrenty-react.herokuapp.com/',
