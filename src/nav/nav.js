@@ -5,8 +5,11 @@ import Scroll from 'react-scroll';
 
 export default class Nav extends Component {
 
+    findHeight = () => {
+        console.log(window.innerHeight)
+    }
+
     scroll = number => {
-        console.log('hey')
         Scroll.animateScroll.scrollTo(number)
     }
 
@@ -15,6 +18,8 @@ export default class Nav extends Component {
     }
 
     render() {
+
+
         const Ul = styled.ul`
             display: inline-block;
             margin-top: 3.5rem;
@@ -93,8 +98,8 @@ export default class Nav extends Component {
                     </div>
                 </Brand>
                 <Ul>
-                    <li onClick={() => {this.scroll(2200)}}>About</li>
-                    <li onClick={() => {this.scroll(1000)}}>Portfolio</li>
+                    <li onClick={() => {this.scroll(this.props.laptop ? 1500 : 2200)}}>About</li>
+                    <li onClick={() => {this.scroll(this.props.laptop ? 700 : 1000)}}>Portfolio</li>
                     <li onClick={() => {this.scrollToBottom()}}>Contact</li>
                 </Ul>
             </Nav>

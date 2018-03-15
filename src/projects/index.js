@@ -14,6 +14,10 @@ import SubHeader from '../general-components/sub-header'
 
 export default function Projects() {
 
+    const getPosition = () => {
+        
+    }
+
     const Projects = styled.div`
         margin-bottom: 10rem;
         background-color: black;
