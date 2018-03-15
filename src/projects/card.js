@@ -37,14 +37,14 @@ export default class Card extends Component {
             img {
                 position: relative;
                 z-index: 1;
-                opacity: .01;
+                opacity: .1;
                 transition: all .3s;
                 width: 100%;
                 &:hover {
 
                     position: relative;
                     display: block;
-                    opacity: 0.3;
+                    opacity: 0.5;
                     transition: all .3s;
                     
                 }
