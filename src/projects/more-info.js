@@ -2,7 +2,6 @@ import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
 export default function MoreInfo(props) {
-    console.log(props.info)
 
     const renderList = items => {
         return items.map(item => {

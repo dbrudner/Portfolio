@@ -3,8 +3,6 @@ import styled from 'styled-components'
 
 export default function(props) {
 
-    console.log(props)
-
     const About = styled.div`
         font-family: lato;
 
@@ -17,7 +15,7 @@ export default function(props) {
 
     const AboutDescription = styled.div`
         p {
-            line-height: 4rem;
+            line-height: 4.5rem;
             text-indent: 4rem;
             font-size: 2rem;
             color: #5b5b5b;            

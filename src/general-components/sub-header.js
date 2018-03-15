@@ -11,8 +11,7 @@ export default function SubHeader(props) {
             font-size: 3.6rem;
             letter-spacing: 2rem;
             color: #2098D1;
-            margin-left: -2rem;
-            
+            margin-left: 2rem;
         }
     `
 

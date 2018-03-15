@@ -7,7 +7,7 @@ export default function ContactText() {
         color: #f3f3f3
         font-family: lato;
         font-size: 1.8rem;
-        text-align: center;
+        
     `
 
     return (

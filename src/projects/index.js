@@ -30,11 +30,15 @@ export default function Projects() {
         width: 50%;
         border-color: #3f3f3f;
     `
+    const SubhdrCntr = styled.div`
+    `
 
 
     return (
         <Projects>
-            <SubHeader noHr text='Projects' />
+            <SubhdrCntr>
+                <SubHeader noHr text='Projects' />
+            </SubhdrCntr>
             <Hr/>
             <GridContainer>
                 <Grid>

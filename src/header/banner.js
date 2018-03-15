@@ -1,13 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import me from '../images/me.jpg'
+import Scroll from 'react-scroll';
 
 export default function Banner() {
+
+    const scrollDown = () => {
+        Scroll.animateScroll.scrollTo(1000)
+    }
 
     const Banner = styled.div`
         font-family: lato
         color: white;
-        padding-top: 20rem;
+        padding-top: 13%;
         text-align: center;
         font-weight: 400;
 
@@ -70,7 +75,7 @@ export default function Banner() {
                 <h1>Full Stack Web Developer</h1>
                 <h5>Creating intelligently written component-based web applications</h5>
                 <ViewPortfolio>
-                    <div>
+                    <div onClick={() => scrollDown()}>
                         <div>View Portfolio</div>
                         <icon>
                             <i className="fas fa-chevron-down"></i>
