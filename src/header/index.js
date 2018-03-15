@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import MediaQuery from 'react-responsive';
 
 import Nav from '../nav'
 import Banner from './banner'
@@ -14,7 +15,12 @@ export default function Header() {
     return (
         <Div>
             <Nav/>
-            <Banner/>
+            <MediaQuery minDeviceWidth={701}>
+                <Banner />
+            </MediaQuery>            
+            <MediaQuery maxDeviceWidth={700}>
+                <Banner mobile/>
+            </MediaQuery>
         </Div>
     )
 }

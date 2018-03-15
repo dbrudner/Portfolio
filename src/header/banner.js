@@ -3,10 +3,12 @@ import styled from 'styled-components'
 import me from '../images/me.jpg'
 import Scroll from 'react-scroll';
 
-export default function Banner() {
+export default function Banner(props) {
+
+    console.log(props.mobile)
 
     const scrollDown = () => {
-        Scroll.animateScroll.scrollTo(1000)
+        Scroll.animateScroll.scrollTo(props.mobile ? 600 : 1000)
     }
 
     const Banner = styled.div`
@@ -77,9 +79,9 @@ export default function Banner() {
                 <ViewPortfolio>
                     <div onClick={() => scrollDown()}>
                         <div>View Portfolio</div>
-                        <icon>
-                            <i className="fas fa-chevron-down"></i>
-                        </icon>
+                            <icon className='icon'>
+                                <i className="fas fa-chevron-down"></i>
+                            </icon>
                     </div>
                 </ViewPortfolio>
             </Header>
