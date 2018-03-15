@@ -40,7 +40,6 @@ export default function About() {
             <Grid>
                 <Row>
                     <Col md={12} lg={6}>
-                        <ImageCluster img1={zbar} img2={me} img3={okinawa}/>
                     </Col>
                     <div>
                     </div>
