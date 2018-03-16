@@ -60,7 +60,7 @@ export default class Nav extends Component {
         `
 
         const BrandHeader = styled.div`
-        
+
             h4 {
                 margin: 0
                 text-transform: uppercase;
@@ -68,7 +68,7 @@ export default class Nav extends Component {
         `
 
         const BrandDescription = styled.div`
-        
+
             p {
                 margin: 1rem 0 0 0;
                 font-size: 1.6rem;
@@ -103,9 +103,8 @@ export default class Nav extends Component {
                     <li onClick={() => {this.scrollToBottom()}}>Contact</li>
                 </Ul>
             </Nav>
-                    
         )
     }
 
-    
+
 }

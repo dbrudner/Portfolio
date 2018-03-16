@@ -16,7 +16,6 @@ import text from './text'
 
 export default function About() {
 
-
     const About = styled.div`
         margin-bottom: 20rem;
         margin-left: 20%;
