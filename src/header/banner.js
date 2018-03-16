@@ -1,15 +1,36 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import me from '../images/me.jpg'
 import Scroll from 'react-scroll';
 
 export default function Banner(props) {
 
-    console.log(props.mobile)
-
     const scrollDown = () => {
         Scroll.animateScroll.scrollTo(props.mobile ? 600 : 1000)
     }
+
+    const slideDown = keyframes`
+        from {
+            transform: translateY(1.5rem);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0rem);
+            opacity: 1;
+        }
+    `;
+
+    const slideUp = keyframes`
+        from {
+            transform: translateY(-1.5rem);
+            opacity: 1;
+        }
+
+        to {
+            transform: translateY(0rem);
+        }
+    `;
 
     const Banner = styled.div`
         font-family: lato
@@ -24,13 +45,14 @@ export default function Banner(props) {
             font-weight: 400;
             margin: 0;
             margin-bottom: 1rem;
-
+            animation: ${slideUp} 1s;
         }
 
         h5 {
             font-size: 2.2rem;
             font-weight: 400;
             margin: 0;
+            animation: ${slideUp} 1s;
         }
     `
 
@@ -38,6 +60,7 @@ export default function Banner(props) {
     `
 
     const ViewPortfolio = styled.div`
+        animation: ${slideDown} 1s;
         text-transform: uppercase;
         margin-top: 5rem;
         font-size: 1.7rem;

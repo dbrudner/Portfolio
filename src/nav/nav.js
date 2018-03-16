@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import img from '../images/me_party_hat.jpg'
 import Scroll from 'react-scroll';
 
@@ -19,6 +19,29 @@ export default class Nav extends Component {
 
     render() {
 
+        const slideUp = keyframes`
+        from {
+                transform: translateY(-1.5rem);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0rem);
+                opacity: 1;
+            }
+        `;
+
+        const slideInLeft = keyframes`
+            from {
+                transform: translateX(-1.5rem);
+                opacity: .5;
+            }
+
+            to {
+                transform: translateX(0rem);
+                opacity: 1;
+            }
+        `
 
         const Ul = styled.ul`
             display: inline-block;
@@ -41,7 +64,22 @@ export default class Nav extends Component {
                 text-transform: uppercase;
                 cursor: pointer;
                 transform: translateY(0rem);
-                transition: all .3s
+                transition: all .3s;
+            }
+
+            li:nth-child(1) {
+                animation: ${slideInLeft} 1s;
+            }
+
+            li:nth-child(2) {
+                animation: ${slideInLeft} 1s;
+                animation-delay: .15s
+                
+            }
+
+            li:nth-child(3) {
+                animation: ${slideInLeft} 1s;
+                animation-delay: .3s                
             }
 
             li:hover {
@@ -57,6 +95,7 @@ export default class Nav extends Component {
         const Brand = styled.div`
             display: flex;
             margin-top: 2.4rem;
+            animation: ${slideUp} 1s;
         `
 
         const BrandHeader = styled.div`
