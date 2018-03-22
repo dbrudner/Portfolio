@@ -53,7 +53,7 @@ export default function MoreInfo(props) {
         letter-spacing: .5rem;
 
         a {
-            color: #f3f3f3;
+            color: white;
             cursor: pointer;
         }
     `
@@ -88,7 +88,6 @@ export default function MoreInfo(props) {
         width: 50%;
         border-color: #3f3f3f; 
     `
-    
 
     return (
         <MoreInfo>
@@ -101,6 +100,7 @@ export default function MoreInfo(props) {
             <Features>
                 {renderList(props.info.features)}
             </Features>
+
         </MoreInfo>
     )
 }

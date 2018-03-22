@@ -82,6 +82,7 @@ export default class Card extends Component {
                     <MoreInfoContainer>
                         <MoreInfo info={this.props.info}/ >
                     </MoreInfoContainer>
+                    {this.props.description}
                 </Card>
             </a>
         )

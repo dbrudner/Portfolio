@@ -7,6 +7,11 @@ import hearthsearch from '../images/project/hearthsearch.png'
 import csgo from '../images/project/csgo.png'
 import crypto from '../images/project/crypto.png'
 import wallpapers from '../images/project/wallpapers.png'
+
+import keyboard from '../images/keyboard.jpg'
+import portfolio from '../images/portfolio.png'
+
+
 import {Row, Col, Grid} from 'react-bootstrap'
 import projects from './project-objects'
 import SubHeader from '../general-components/sub-header'
@@ -54,10 +59,10 @@ export default function Projects() {
                             <Card img={csgo} info={projects.csgo} />
                         </Col>
                         <Col className='no-padding' md={6} xs={12} lg={3}>
-                            <Card bottom odd img={wallpapers} info={projects.wallpapers}/>
+                            <Card img={keyboard} bottom odd info={projects.rateMyKeyboard}/>
                         </Col>
                         <Col className='no-padding' md={6} xs={12} lg={3}>
-                            <Card bottom img={crypto} info={projects.bitcoin}/>
+                            <Card img={portfolio} bottom info={projects.portfolio}/>
                         </Col>
                     </Row>
                 </Grid>
